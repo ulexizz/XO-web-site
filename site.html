@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>XO - Choisis ton mode</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Écran d'accueil -->
+  <div id="lobby">
+    <h1>🎮 Jeu de XO</h1>
+    <h2>Choisis un mode de jeu :</h2>
+    <button onclick="startGame('player')">👥 2 Joueurs</button>
+    <button onclick="startGame('ai')">🤖 Contre l'IA</button>
+  </div>
+
+  <!-- Plateau du jeu -->
+  <div id="game" class="hidden">
+    <h1>XO</h1>
+    <div id="board">
+      <div class="cell" onclick="play(0)"></div>
+      <div class="cell" onclick="play(1)"></div>
+      <div class="cell" onclick="play(2)"></div>
+      <div class="cell" onclick="play(3)"></div>
+      <div class="cell" onclick="play(4)"></div>
+      <div class="cell" onclick="play(5)"></div>
+      <div class="cell" onclick="play(6)"></div>
+      <div class="cell" onclick="play(7)"></div>
+      <div class="cell" onclick="play(8)"></div>
+    </div>
+
+    <h2 id="status">C'est au tour du joueur X</h2>
+    <button onclick="resetGame()">Rejouer</button>
+    <button onclick="goBack()">🏠 Retour au menu</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
